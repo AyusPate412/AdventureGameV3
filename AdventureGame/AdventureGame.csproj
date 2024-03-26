@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E8E9450-9F94-4FFA-B1B1-AD3AD7A3B6CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AdventureGame</RootNamespace>
+    <AssemblyName>AdventureGame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElevenLabs_2024-03-23T01_54_23_Adam.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celtic-7136.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celtic-7136.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medieval_village_atmosphere-79282.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Screen Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\village elder running away.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Congrats you won.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food poisioning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thorn bushpit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cave entrance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster lurking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Final boss fight.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evil king.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rustling-leaves-6875.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\running.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nightTime.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hungry.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
