@@ -29,6 +29,7 @@ namespace AdventureGame
         new SoundPlayer running = new SoundPlayer(Properties.Resources.running);
         new SoundPlayer night = new SoundPlayer(Properties.Resources.nightTime);
         new SoundPlayer hungry = new SoundPlayer(Properties.Resources.hungry);
+        new SoundPlayer monsterDeath = new SoundPlayer(Properties.Resources.MonsterDeath);
 
         Random randGen = new Random();
 
@@ -155,48 +156,57 @@ namespace AdventureGame
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.thorn_bushpit;
+                    death.Play();
                     break;
                 case 13:
                     outputLabel.Text = "You stumble upon a deer. Eat it raw so you can go back fast or cook it and eat it?";
                     option1Label.Text = "Eat it raw";
                     option2Label.Text = "Cook it";
                     mainPictureBox.Image = Properties.Resources.page14;
+                    villageSound.Play();
                     break;
                 case 14:
                     outputLabel.Text = "You found the cave with the relic. Do you enter the cave or make a torch";
                     option1Label.Text = "Enter the cave";
                     option2Label.Text = "Make a torch";
                     mainPictureBox.Image = Properties.Resources.cave_entrance;
+                    monsterScream.Play();
+
                     break;
                 case 15:
                     outputLabel.Text = "You suffered food poisioning and died. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.food_poisioning;
+                    death.Play();  
                     break;
                 case 16:
                     outputLabel.Text = "While you were cooking a moster attacked you from the back and you died. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.monster_lurking;
+                    death.Play();
                     break;
                 case 17:
                     outputLabel.Text = "You entered the cave and encounter the monster lurking behind you. Do you use the potion to kill the monster or use sword becuase this might not be the strongest monster there or do you run past this monster?";
                     option1Label.Text = "Use potion";
                     option2Label.Text = "Use sword";
                     mainPictureBox.Image = Properties.Resources.monster_lurking;
+                    monsterScream.Play();
                     break;
                 case 18:
                     outputLabel.Text = "You went to find resources for a torch. While trying to wood the tree fell on you and you died. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.dead;
+                    death.Play();
                     break;
                 case 19:
                     outputLabel.Text = "The monster dies and you see a glowing light coming from the relic. You retrive it and give it to the king. Do you tell the king to pay you or request him to hire you for most jobs like this?";
                     option1Label.Text = "Ask for money";
                     option2Label.Text = "Ask for job";
                     mainPictureBox.Image = Properties.Resources.menuImage;
+                    MonsterDeath.Play();
                     break;
                 case 20:
                     outputLabel.Text = "There was 20 foot fall ahead and you died. Play again?";

@@ -207,6 +207,15 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterDeath {
+            get {
+                return ResourceManager.GetStream("MonsterDeath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream monsterLurkingBehind {
             get {
                 return ResourceManager.GetStream("monsterLurkingBehind", resourceCulture);
