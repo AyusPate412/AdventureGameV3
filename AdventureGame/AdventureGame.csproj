@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\Death sounds of the monster %28Sound effect%29.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct answer reward Sound Effect.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

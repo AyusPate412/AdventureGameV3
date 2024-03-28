@@ -10,14 +10,18 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+// 27th March 2024
+//Find the lost Relic 
+//Ayush Patel
 
 namespace AdventureGame
 {
     public partial class Form1 : Form
     {
-        //Track what page you are on
+        //The page you start with
         int page = 1;
 
+        //Different Sounds used throught the story
         new SoundPlayer introSound = new SoundPlayer(Properties.Resources.journeySound);
         new SoundPlayer journeySound = new SoundPlayer(Properties.Resources.Menu_Screen_Sound);
         new SoundPlayer villageSound = new SoundPlayer(Properties.Resources.medieval_village_atmosphere);
@@ -30,13 +34,16 @@ namespace AdventureGame
         new SoundPlayer night = new SoundPlayer(Properties.Resources.nightTime);
         new SoundPlayer hungry = new SoundPlayer(Properties.Resources.hungry);
         new SoundPlayer monsterDeath = new SoundPlayer(Properties.Resources.MonsterDeath);
+        new SoundPlayer winSound = new SoundPlayer(Properties.Resources.winSound);
 
+        //Create a random generator
         Random randGen = new Random();
 
         
         public Form1()
         {
             InitializeComponent();
+            //Menu/Starting page setup
             introSound.Play();
             outputLabel.Visible = false;
             mainPictureBox.Visible = false;
@@ -50,7 +57,7 @@ namespace AdventureGame
 
         private void playButton_Click(object sender, EventArgs e)
         {
-
+            //story/Main game setup
             mainPictureBox.Visible = true;
             outputLabel.Visible = true;
             option1Button.Visible = true;
@@ -69,6 +76,7 @@ namespace AdventureGame
         }
         private void displayPage()
         {
+            //different pages
             switch (page)
             {
                 case 1:
@@ -206,44 +214,49 @@ namespace AdventureGame
                     option1Label.Text = "Ask for money";
                     option2Label.Text = "Ask for job";
                     mainPictureBox.Image = Properties.Resources.menuImage;
-                    MonsterDeath.Play();
+                    monsterDeath.Play();
                     break;
                 case 20:
                     outputLabel.Text = "There was 20 foot fall ahead and you died. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.thorn_bushpit;
+                    death.Play();
                     break;
                 case 21:
                     outputLabel.Text = "You didn't have enough energy to strike the monster and it ended up killing you. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.Final_boss_fight;
+                    death.Play();
                     break;
                 case 22:
                     outputLabel.Text = "The king became evil after possing the power of the relic and kills you. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.evil_king;
+                    death.Play();
                     break;
                 case 23:
                     outputLabel.Text = "The king hires you and rewards you for this task. Congrats!!! You did it. Do you want to play again and try a different journey?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.Congrats_you_won;
-
+                    winSound.Play();
                     break;
                 case 24:
                     outputLabel.Text = "They got scared from you and ran away you failed the mission. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.village_elder_running_away;
+                    running.Play();
                     break;
                 case 25:
                     outputLabel.Text = "You set out for the journey and spent years searching but you gave up and the king killed you for returning empty handed. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.food_poisioning;
+                    death.Play();
                     break;
                 case 26:
                     outputLabel.Text = "Thank you for playing.";

@@ -349,6 +349,15 @@ namespace AdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://www.youtube.com/watch?v=yPlhQzPPtg4.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap thorn_bushpit {
@@ -365,6 +374,15 @@ namespace AdventureGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("village_elder_running_away", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream winSound {
+            get {
+                return ResourceManager.GetStream("winSound", resourceCulture);
             }
         }
     }
