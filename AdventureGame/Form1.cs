@@ -72,7 +72,6 @@ namespace AdventureGame
             playButton.Visible = false;
             introSound.Stop();
             displayPage(); 
-
         }
         private void displayPage()
         {
@@ -149,7 +148,6 @@ namespace AdventureGame
                     option2Label.Text = "No";
                     mainPictureBox.Image = Properties.Resources.page7;
                     death.Play();
-
                     break;
                 case 11:
                     outputLabel.Text = "You successfully made a temporary shelter for the night. You are hungry when you wake up.Do you go hunting or keep going to find the relic";
@@ -157,7 +155,6 @@ namespace AdventureGame
                     option2Label.Text = "Find relic";
                     mainPictureBox.Image = Properties.Resources.page11;
                     hungry.Play();
-
                     break;
                 case 12:
                     outputLabel.Text = "It got too dark and you couldn't see your path you fell in a pit and died. Play again?";
@@ -179,7 +176,6 @@ namespace AdventureGame
                     option2Label.Text = "Make a torch";
                     mainPictureBox.Image = Properties.Resources.cave_entrance;
                     monsterScream.Play();
-
                     break;
                 case 15:
                     outputLabel.Text = "You suffered food poisioning and died. Play again?";
@@ -259,6 +255,7 @@ namespace AdventureGame
                     death.Play();
                     break;
                 case 26:
+                    Refresh();
                     outputLabel.Text = "Thank you for playing.";
                     option1Label.Text = "";
                     option2Label.Text = "";
@@ -266,9 +263,6 @@ namespace AdventureGame
                     Refresh();
                     Application.Exit();
                     break;
-
-
-
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -375,9 +369,7 @@ namespace AdventureGame
             {
                 page = 1;
             }
-
             displayPage();
-
         }
 
         private void option2Button_Click(object sender, EventArgs e)
@@ -387,7 +379,6 @@ namespace AdventureGame
                 page = 3;
                 journeySound.Stop();
             }
-
             else if (page == 2)
             {
                 page = 5;
@@ -496,7 +487,5 @@ namespace AdventureGame
             }
             displayPage();
         }
-
-
     }
 }
